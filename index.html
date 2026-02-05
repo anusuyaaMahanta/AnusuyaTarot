@@ -1,294 +1,484 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anusuya's Tarot Space & Guidance | Clarity for the heart and mind</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Anusuya's Tarot Space & Guidance | Clarity for the heart and mind
+    </title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bgMain: '#fdfbf9',   // Original Light
-                        bgAlt: '#f3efe9',    // A "lil darker" warm beige for even sections
-                        textMain: '#4a3f35', // Deep Loam
-                        gold: '#b39359',     // Muted Gold
-                        goldLight: '#d4c5a9',
-                        accent: '#2c2c2c',
-                        primaryBtn: '#e9dec7',
-                    },
-                    fontFamily: {
-                        heading: ['Cinzel', 'serif'],
-                        body: ['Lora', 'serif'],
-                    },
-                    boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bgMain: "#fdfbf9", // Original Light
+              bgAlt: "#f3efe9", // A "lil darker" warm beige for even sections
+              textMain: "#4a3f35", // Deep Loam
+              gold: "#b39359", // Muted Gold
+              goldLight: "#d4c5a9",
+              accent: "#2c2c2c",
+              primaryBtn: "#e9dec7",
+            },
+            fontFamily: {
+              heading: ["Cinzel", "serif"],
+              body: ["Lora", "serif"],
+            },
+            boxShadow: {
+              soft: "0 10px 40px -10px rgba(0,0,0,0.05)",
+            },
+          },
+        },
+      };
     </script>
 
     <style>
-        /* Custom Animation Utilities */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        .fade-in.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Elegant Underline Hover Effect for Nav/Links */
-        .hover-underline {
-            position: relative;
-        }
-        .hover-underline::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: #b39359;
-            transition: width 0.3s ease;
-        }
-        .hover-underline:hover::after {
-            width: 100%;
-        }
-    </style>
-</head>
-<body class="bg-bgMain text-textMain font-body leading-relaxed overflow-x-hidden antialiased">
+      /* Custom Animation Utilities */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 1s ease-out,
+          transform 1s ease-out;
+      }
+      .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-    <header class="relative flex flex-col md:flex-row items-center justify-between px-8 py-16 md:px-24 min-h-[90vh] gap-16 fade-in bg-bgMain">
-        
-        <div class="flex-1 md:pr-12 text-center md:text-left z-10">
-            <img src="assets/logo.png" alt="Anusuya's Tarot Space & Guidance" class="w-64 md:w-80 mx-auto md:mx-0 mb-6 opacity-90">
-            
-            <span class="block italic text-gold mb-6 tracking-[0.2em] text-sm uppercase">
-                Clarity for the heart and mind
-            </span>
-            
-            <h1 class="font-heading text-4xl md:text-6xl mb-8 font-normal leading-tight text-accent">
-                Guidance, clarity, and emotional insight through Tarot
-            </h1>
-            
-            <div class="w-16 h-[1px] bg-gold mx-auto md:mx-0 mb-8"></div>
-            
-            <p class="text-xl italic text-textMain/80 mb-6 font-light">
-                Intuitive tarot readings blended with psychological understanding to help you make aligned decisions.
-            </p>
-            
-            <p class="text-lg text-textMain/90 mb-10 max-w-2xl leading-8">
-                I offer intuitive tarot readings focused on clarity, emotional healing, and self-understanding. My approach combines tarot symbolism with a psychology background to guide you gently through life’s questions.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
-                <a href="#contact" class="px-10 py-4 rounded-full border border-gold bg-primaryBtn text-textMain text-xs font-heading tracking-[0.15em] uppercase transition hover:bg-white hover:shadow-soft duration-300">
-                    Book a Reading
-                </a>
-                <a href="https://wa.me/917099745565" class="px-10 py-4 rounded-full border border-textMain bg-transparent text-textMain text-xs font-heading tracking-[0.15em] uppercase transition hover:bg-textMain hover:text-white duration-300">
-                    Connect With Me
-                </a>
-            </div>
+      /* Elegant Underline Hover Effect for Nav/Links */
+      .hover-underline {
+        position: relative;
+      }
+      .hover-underline::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: #b39359;
+        transition: width 0.3s ease;
+      }
+      .hover-underline:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-bgMain text-textMain font-body leading-relaxed overflow-x-hidden antialiased"
+  >
+    <header
+      class="relative flex flex-col md:flex-row items-center justify-between px-8 py-16 md:px-24 min-h-[90vh] gap-16 fade-in bg-bgMain"
+    >
+      <div class="flex-1 md:pr-12 text-center md:text-left z-10">
+        <img
+          src="assets/logo.png"
+          alt="Anusuya's Tarot Space & Guidance"
+          class="w-64 md:w-80 mx-auto md:mx-0 mb-6 opacity-90"
+        />
+
+        <span
+          class="block italic text-gold mb-6 tracking-[0.2em] text-sm uppercase"
+        >
+          Clarity for the heart and mind
+        </span>
+
+        <h1
+          class="font-heading text-4xl md:text-6xl mb-8 font-normal leading-tight text-accent"
+        >
+          Guidance, clarity, and emotional insight through Tarot
+        </h1>
+
+        <div class="w-16 h-[1px] bg-gold mx-auto md:mx-0 mb-8"></div>
+
+        <p class="text-xl italic text-textMain/80 mb-6 font-light">
+          Intuitive tarot readings blended with psychological understanding to
+          help you make aligned decisions.
+        </p>
+
+        <p class="text-lg text-textMain/90 mb-10 max-w-2xl leading-8">
+          I offer intuitive tarot readings focused on clarity, emotional
+          healing, and self-understanding. My approach combines tarot symbolism
+          with a psychology background to guide you gently through life’s
+          questions.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center md:justify-start"
+        >
+          <a
+            href="#contact"
+            class="px-10 py-4 rounded-full border border-gold bg-primaryBtn text-textMain text-xs font-heading tracking-[0.15em] uppercase transition hover:bg-white hover:shadow-soft duration-300"
+          >
+            Book a Reading
+          </a>
+          <a
+            href="https://wa.me/917099745565"
+            class="px-10 py-4 rounded-full border border-textMain bg-transparent text-textMain text-xs font-heading tracking-[0.15em] uppercase transition hover:bg-textMain hover:text-white duration-300"
+          >
+            Connect With Me
+          </a>
         </div>
-        
-        <div class="w-full md:w-auto flex justify-center z-10 hidden lg:block">
-            <div class="relative">
-                <div class="absolute inset-0 border border-gold/30 rounded-[200px_200px_0_0] translate-x-4 translate-y-4"></div>
-                <img src="assets/profile.jpg" alt="Anusuya Profile" class="relative w-full max-w-[400px] h-[550px] object-cover rounded-[200px_200px_0_0] shadow-soft bg-white p-2">
-            </div>
+      </div>
+
+      <div class="w-full md:w-auto flex justify-center z-10 hidden lg:block">
+        <div class="relative">
+          <div
+            class="absolute inset-0 border border-gold/30 rounded-[200px_200px_0_0] translate-x-4 translate-y-4"
+          ></div>
+          <img
+            src="assets/profile.jpg"
+            alt="Anusuya Profile"
+            class="relative w-full max-w-[400px] h-[550px] object-cover rounded-[200px_200px_0_0] shadow-soft bg-white p-2"
+          />
         </div>
+      </div>
     </header>
 
     <section id="about" class="py-24 px-8 md:px-24 bg-bgAlt fade-in relative">
-        <div class="text-center tracking-[0.3em] text-2xl text-gold mb-16 font-heading font-semibold uppercase">
-            <span class="opacity-50 mx-2">✦</span> About Me <span class="opacity-50 mx-2">✦</span>
+      <div
+        class="text-center tracking-[0.3em] text-2xl text-gold mb-16 font-heading font-semibold uppercase"
+      >
+        <span class="opacity-50 mx-2">✦</span> About Me
+        <span class="opacity-50 mx-2">✦</span>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row items-center gap-16 max-w-6xl mx-auto"
+      >
+        <div class="shrink-0 relative hidden lg:block">
+          <img
+            src="assets/profile2.jpg"
+            alt="Anusuya - Tarot Reader"
+            class="w-[380px] h-[480px] object-cover rounded-[190px] shadow-soft"
+          />
         </div>
-        
-        <div class="flex flex-col md:flex-row items-center gap-16 max-w-6xl mx-auto">
-            <div class="shrink-0 relative hidden lg:block">
-                 <img src="assets/profile2.jpg" alt="Anusuya - Tarot Reader" class="w-[380px] h-[480px] object-cover rounded-[190px] shadow-soft">
-            </div>
-            <div class="w-full md:w-auto flex justify-center z-10 block md:hidden">
-            <div class="relative">
-                <div class="absolute inset-0 border border-gold/30 rounded-[200px_200px_0_0] translate-x-4 translate-y-4"></div>
-                <img src="assets/profile.jpg" alt="Anusuya - Tarot Reader" class="relative w-full max-w-[400px] h-[550px] object-cover rounded-[200px_200px_0_0] shadow-soft bg-white p-2">
-            </div>
+        <div class="w-full md:w-auto flex justify-center z-10 block md:hidden">
+          <div class="relative">
+            <div
+              class="absolute inset-0 border border-gold/30 rounded-[200px_200px_0_0] translate-x-4 translate-y-4"
+            ></div>
+            <img
+              src="assets/profile.jpg"
+              alt="Anusuya - Tarot Reader"
+              class="relative w-full max-w-[400px] h-[550px] object-cover rounded-[200px_200px_0_0] shadow-soft bg-white p-2"
+            />
+          </div>
         </div>
-            
-            <div class="text-center md:text-left">
-                <h2 class="font-heading text-3xl md:text-4xl mb-8 leading-snug text-accent">
-                    Hi, I’m Anusuya — <br> <span class="italic font-body text-2xl text-gold">Certified tarot reader & psychology graduate.</span>
-                </h2>
-                <div class="space-y-6 text-lg text-textMain/90 font-light">
-                    <p>
-                        My journey with tarot began as a personal tool for self-reflection and healing, gradually evolving into a way to support others during times of confusion, emotional stress, and transition.
-                    </p>
-                    <p>
-                        I believe tarot is not about predicting fate but about understanding energies, patterns, and inner truths. With my background in psychology, I aim to provide grounded, empathetic guidance alongside tarot insights.
-                    </p>
-                    <p class="font-medium text-gold border-l-2 border-gold pl-6 py-2 my-6">
-                        "My readings are intuitive, ethical, and focused on clarity rather than fear."
-                    </p>
-                </div>
-            </div>
+
+        <div class="text-center md:text-left">
+          <h2
+            class="font-heading text-3xl md:text-4xl mb-8 leading-snug text-accent"
+          >
+            Hi, I’m Anusuya — <br />
+            <span class="italic font-body text-2xl text-gold"
+              >Certified tarot reader & psychology graduate.</span
+            >
+          </h2>
+          <div class="space-y-6 text-lg text-textMain/90 font-light">
+            <p>
+              My journey with tarot began as a personal tool for self-reflection
+              and healing, gradually evolving into a way to support others
+              during times of confusion, emotional stress, and transition.
+            </p>
+            <p>
+              I believe tarot is not about predicting fate but about
+              understanding energies, patterns, and inner truths. With my
+              background in psychology, I aim to provide grounded, empathetic
+              guidance alongside tarot insights.
+            </p>
+            <p
+              class="font-medium text-gold border-l-2 border-gold pl-6 py-2 my-6"
+            >
+              "My readings are intuitive, ethical, and focused on clarity rather
+              than fear."
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="services" class="py-24 px-8 md:px-24 bg-bgMain text-center">
-        <div class="text-center tracking-[0.3em] text-2xl text-gold mb-16 font-heading font-semibold uppercase fade-in">
-            <span class="opacity-50 mx-2">✦</span> Offerings <span class="opacity-50 mx-2">✦</span>
+      <div
+        class="text-center tracking-[0.3em] text-2xl text-gold mb-16 font-heading font-semibold uppercase fade-in"
+      >
+        <span class="opacity-50 mx-2">✦</span> Offerings
+        <span class="opacity-50 mx-2">✦</span>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-16 justify-center"
+      >
+        <div
+          class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default"
+        >
+          <div
+            class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300"
+          >
+            ✨
+          </div>
+          <h3 class="font-heading text-sm tracking-widest uppercase mb-2">
+            Yes / No
+          </h3>
+          <p class="text-xs text-gray-500 font-serif italic">Quick Clarity</p>
         </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-16 justify-center">
-            <div class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default">
-                <div class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300">✨</div>
-                <h3 class="font-heading text-sm tracking-widest uppercase mb-2">Yes / No</h3>
-                <p class="text-xs text-gray-500 font-serif italic">Quick Clarity</p>
-            </div>
 
-            <div class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default">
-                <div class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300">🌙</div>
-                <h3 class="font-heading text-sm tracking-widest uppercase mb-2">Love & Relations</h3>
-                <p class="text-xs text-gray-500 font-serif italic">Heart Guidance</p>
-            </div>
-
-            <div class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default">
-                <div class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300">🪐</div>
-                <h3 class="font-heading text-sm tracking-widest uppercase mb-2">Career Path</h3>
-                <p class="text-xs text-gray-500 font-serif italic">Direction & Purpose</p>
-            </div>
-
-            <div class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default">
-                <div class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300">🌿</div>
-                <h3 class="font-heading text-sm tracking-widest uppercase mb-2">Mental Clarity</h3>
-                <p class="text-xs text-gray-500 font-serif italic">Healing Insight</p>
-            </div>
-
-            <div class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default">
-                <div class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300">✦</div>
-                <h3 class="font-heading text-sm tracking-widest uppercase mb-2">Life Guidance</h3>
-                <p class="text-xs text-gray-500 font-serif italic">General Outlook</p>
-            </div>
+        <div
+          class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default"
+        >
+          <div
+            class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300"
+          >
+            🌙
+          </div>
+          <h3 class="font-heading text-sm tracking-widest uppercase mb-2">
+            Love & Relations
+          </h3>
+          <p class="text-xs text-gray-500 font-serif italic">Heart Guidance</p>
         </div>
-        
-        <p class="font-serif italic text-lg text-textMain/70 fade-in max-w-2xl mx-auto">
-            Every reading is a sacred space, personalized to bring you insight, emotional safety, and a clearer path forward.
-        </p>
+
+        <div
+          class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default"
+        >
+          <div
+            class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300"
+          >
+            🪐
+          </div>
+          <h3 class="font-heading text-sm tracking-widest uppercase mb-2">
+            Career Path
+          </h3>
+          <p class="text-xs text-gray-500 font-serif italic">
+            Direction & Purpose
+          </p>
+        </div>
+
+        <div
+          class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default"
+        >
+          <div
+            class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300"
+          >
+            🌿
+          </div>
+          <h3 class="font-heading text-sm tracking-widest uppercase mb-2">
+            Mental Clarity
+          </h3>
+          <p class="text-xs text-gray-500 font-serif italic">Healing Insight</p>
+        </div>
+
+        <div
+          class="p-8 bg-white border border-transparent hover:border-gold/30 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 fade-in group cursor-default"
+        >
+          <div
+            class="text-3xl text-gold mb-4 group-hover:scale-110 transition-transform duration-300"
+          >
+            ✦
+          </div>
+          <h3 class="font-heading text-sm tracking-widest uppercase mb-2">
+            Life Guidance
+          </h3>
+          <p class="text-xs text-gray-500 font-serif italic">General Outlook</p>
+        </div>
+      </div>
+
+      <p
+        class="font-serif italic text-lg text-textMain/70 fade-in max-w-2xl mx-auto"
+      >
+        Every reading is a sacred space, personalized to bring you insight,
+        emotional safety, and a clearer path forward.
+      </p>
     </section>
 
     <section id="how-it-works" class="py-24 px-8 md:px-24 bg-bgAlt fade-in">
-        <div class="text-center tracking-[0.3em] text-2xl text-gold mb-16 font-heading font-semibold uppercase">
-            <span class="opacity-50 mx-2">✦</span> The Process <span class="opacity-50 mx-2">✦</span>
+      <div
+        class="text-center tracking-[0.3em] text-2xl text-gold mb-16 font-heading font-semibold uppercase"
+      >
+        <span class="opacity-50 mx-2">✦</span> The Process
+        <span class="opacity-50 mx-2">✦</span>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto relative"
+      >
+        <div
+          class="hidden md:block absolute top-6 left-0 w-full h-[1px] bg-gold/20 z-0"
+        ></div>
+
+        <div class="relative z-10 text-center group">
+          <div
+            class="w-12 h-12 mx-auto bg-bgAlt border border-gold rounded-full flex items-center justify-center font-heading text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300"
+          >
+            1
+          </div>
+          <h4 class="font-heading text-sm uppercase tracking-wide mb-3">
+            Select
+          </h4>
+          <p class="text-sm opacity-80 px-4">
+            Choose the type of tarot reading that calls to you.
+          </p>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
-            <div class="hidden md:block absolute top-6 left-0 w-full h-[1px] bg-gold/20 z-0"></div>
 
-            <div class="relative z-10 text-center group">
-                <div class="w-12 h-12 mx-auto bg-bgAlt border border-gold rounded-full flex items-center justify-center font-heading text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300">1</div>
-                <h4 class="font-heading text-sm uppercase tracking-wide mb-3">Select</h4>
-                <p class="text-sm opacity-80 px-4">Choose the type of tarot reading that calls to you.</p>
-            </div>
-
-            <div class="relative z-10 text-center group">
-                <div class="w-12 h-12 mx-auto bg-bgAlt border border-gold rounded-full flex items-center justify-center font-heading text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300">2</div>
-                <h4 class="font-heading text-sm uppercase tracking-wide mb-3">Ask</h4>
-                <p class="text-sm opacity-80 px-4">Share your question clearly, honestly, and openly.</p>
-            </div>
-
-            <div class="relative z-10 text-center group">
-                <div class="w-12 h-12 mx-auto bg-bgAlt border border-gold rounded-full flex items-center justify-center font-heading text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300">3</div>
-                <h4 class="font-heading text-sm uppercase tracking-wide mb-3">Confirm</h4>
-                <p class="text-sm opacity-80 px-4">Complete your booking securely.</p>
-            </div>
-
-            <div class="relative z-10 text-center group">
-                <div class="w-12 h-12 mx-auto bg-bgAlt border border-gold rounded-full flex items-center justify-center font-heading text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300">4</div>
-                <h4 class="font-heading text-sm uppercase tracking-wide mb-3">Receive</h4>
-                <p class="text-sm opacity-80 px-4">Get your detailed, intuitive guidance delivered.</p>
-            </div>
+        <div class="relative z-10 text-center group">
+          <div
+            class="w-12 h-12 mx-auto bg-bgAlt border border-gold rounded-full flex items-center justify-center font-heading text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300"
+          >
+            2
+          </div>
+          <h4 class="font-heading text-sm uppercase tracking-wide mb-3">Ask</h4>
+          <p class="text-sm opacity-80 px-4">
+            Share your question clearly, honestly, and openly.
+          </p>
         </div>
+
+        <div class="relative z-10 text-center group">
+          <div
+            class="w-12 h-12 mx-auto bg-bgAlt border border-gold rounded-full flex items-center justify-center font-heading text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300"
+          >
+            3
+          </div>
+          <h4 class="font-heading text-sm uppercase tracking-wide mb-3">
+            Confirm
+          </h4>
+          <p class="text-sm opacity-80 px-4">Complete your booking securely.</p>
+        </div>
+
+        <div class="relative z-10 text-center group">
+          <div
+            class="w-12 h-12 mx-auto bg-bgAlt border border-gold rounded-full flex items-center justify-center font-heading text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300"
+          >
+            4
+          </div>
+          <h4 class="font-heading text-sm uppercase tracking-wide mb-3">
+            Receive
+          </h4>
+          <p class="text-sm opacity-80 px-4">
+            Get your detailed, intuitive guidance delivered.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="py-24 px-8 md:px-24 bg-bgMain text-center fade-in">
-        <div class="text-center tracking-[0.3em] text-2xl text-gold mb-16 font-heading font-semibold uppercase">
-            <span class="opacity-50 mx-2">✦</span> Kind Words <span class="opacity-50 mx-2">✦</span>
-        </div>
-        <div class="max-w-2xl mx-auto border-t border-b border-gold/10 py-12">
-            <p class="font-heading italic text-xl text-gray-400">"Client feedback and testimonials will be appearing here soon..."</p>
-        </div>
+      <div
+        class="text-center tracking-[0.3em] text-2xl text-gold mb-16 font-heading font-semibold uppercase"
+      >
+        <span class="opacity-50 mx-2">✦</span> Kind Words
+        <span class="opacity-50 mx-2">✦</span>
+      </div>
+      <div class="max-w-2xl mx-auto border-t border-b border-gold/10 py-12">
+        <p class="font-heading italic text-xl text-gray-400">
+          "Client feedback and testimonials will be appearing here soon..."
+        </p>
+      </div>
     </section>
 
-    <section id="contact" class="py-24 px-8 md:px-24 bg-bgAlt text-center fade-in">
-        <div class="max-w-5xl mx-auto bg-white p-12 md:p-16 rounded-2xl shadow-soft border border-white/50">
-            <div class="text-center tracking-[0.3em] text-md text-gold mb-8 font-heading font-semibold uppercase">
-                <span class="opacity-50 mx-2">✦</span> Book a Reading <span class="opacity-50 mx-2">✦</span>
-            </div>
-            
-            <h3 class="font-heading text-3xl md:text-4xl mb-4 text-accent">Ready to find clarity?</h3>
-            <p class="mb-10 text-lg opacity-80 font-light">
-                Connect with me directly to schedule your session.<br>
-                <!-- <span class="font-medium mt-2 block">+91 70997 45565</span> -->
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="https://wa.me/917099745565" class="px-10 py-4 rounded-full bg-gold text-white text-xs font-heading tracking-[0.15em] uppercase transition hover:bg-accent duration-300 shadow-md">
-                    Message on WhatsApp
-                </a>
-                <a href="#" class="px-10 py-4 rounded-full border border-accent text-accent hover:bg-accent hover:text-white text-xs font-heading tracking-[0.15em] uppercase transition duration-300">
-                    Instagram DM
-                </a>
-            </div>
+    <section
+      id="contact"
+      class="py-24 px-8 md:px-24 bg-bgAlt text-center fade-in"
+    >
+      <div
+        class="max-w-6xl mx-auto bg-white p-12 md:p-16 rounded-2xl shadow-soft border border-white/50"
+      >
+        <div
+          class="grid grid-cols-[auto_1fr_auto] items-center text-gold font-heading uppercase tracking-[0.3em] text-2xl"
+        >
+          <!-- Left star (centered vertically between lines) -->
+          <div class="row-span-2 flex items-center opacity-50">✦</div>
+
+          <!-- Text -->
+          <div class="text-center">
+            <div>Book a</div>
+            <div class="mt-1">Reading</div>
+          </div>
+
+          <!-- Right star (centered vertically between lines) -->
+          <div class="row-span-2 flex items-center opacity-50">✦</div>
         </div>
+
+        <h3 class="font-heading text-3xl md:text-4xl my-4 text-accent">
+          Ready to find clarity?
+        </h3>
+        <p class="mb-10 text-lg opacity-80 font-light">
+          Connect with me directly to schedule your session.<br />
+          <!-- <span class="font-medium mt-2 block">+91 70997 45565</span> -->
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+          <a
+            href="https://wa.me/917099745565"
+            class="px-10 py-4 rounded-full bg-gold text-white text-xs font-heading tracking-[0.15em] uppercase transition hover:bg-accent duration-300 shadow-md"
+          >
+            Message on WhatsApp
+          </a>
+          <a
+            href="#"
+            class="px-10 py-4 rounded-full border border-accent text-accent hover:bg-accent hover:text-white text-xs font-heading tracking-[0.15em] uppercase transition duration-300"
+          >
+            Instagram DM
+          </a>
+        </div>
+      </div>
     </section>
 
-    <footer class="py-16 px-8 md:px-24 text-center bg-[#2c2c2c] text-[#fdfbf9] fade-in">
-        <div class="max-w-3xl mx-auto mb-10 text-sm opacity-60 leading-relaxed font-light">
-            <p class="mb-2 uppercase tracking-widest font-heading text-gold text-md">Disclaimer</p>
-            <p>Tarot readings are meant for guidance and self-reflection only. They do not replace professional medical, legal, or psychological advice. The choices you make are your own responsibility.</p>
-        </div>
-        <div class="w-16 h-[1px] bg-white/10 mx-auto mb-10"></div>
-        <p class="text-xs tracking-widest opacity-40 uppercase">© 2026 Anusuya's Tarot Space & Guidance. All Rights Reserved.</p>
+    <footer
+      class="py-16 px-8 md:px-24 text-center bg-[#2c2c2c] text-[#fdfbf9] fade-in"
+    >
+      <div
+        class="max-w-3xl mx-auto mb-10 text-sm opacity-60 leading-relaxed font-light"
+      >
+        <p
+          class="mb-2 uppercase tracking-widest font-heading text-gold text-md"
+        >
+          Disclaimer
+        </p>
+        <p>
+          Tarot readings are meant for guidance and self-reflection only. They
+          do not replace professional medical, legal, or psychological advice.
+          The choices you make are your own responsibility.
+        </p>
+      </div>
+      <div class="w-16 h-[1px] bg-white/10 mx-auto mb-10"></div>
+      <p class="text-xs tracking-widest opacity-40 uppercase">
+        © 2026 Anusuya's Tarot Space & Guidance. All Rights Reserved.
+      </p>
     </footer>
 
     <script>
-        // Smooth Scrolling for Navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+      // Smooth Scrolling for Navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
         });
+      });
 
-        // Intersection Observer for Fade-In Effect
-        const elements = document.querySelectorAll(".fade-in");
+      // Intersection Observer for Fade-In Effect
+      const elements = document.querySelectorAll(".fade-in");
 
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
-                });
-            },
-            { threshold: 0.1 }
-        );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
 
-        elements.forEach(el => observer.observe(el));
+      elements.forEach((el) => observer.observe(el));
     </script>
-</body>
-
+  </body>
 </html>
-
