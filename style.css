@@ -1,0 +1,197 @@
+/* =========================
+   TESTIMONIAL CAROUSEL
+========================= */
+.testimonial-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 60px auto;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-viewport {
+  width: calc(100% - 140px);
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+#testimonial-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.testimonial-name {
+  font-family: "Cinzel", serif;
+  color: #b39359;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
+}
+.testimonial-text {
+    text-align: justify;
+
+}
+
+.testimonial-name::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;          
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #b39359,
+    transparent
+  );
+  transition: width 1s ease;
+}
+
+.testimonial-card.active .testimonial-name::after {
+  width: 100px;
+}
+
+.testimonial-card {
+  flex: 0 0 calc((100% - 40px) / 1.75);
+  padding: 20px 20px;
+  margin: 0;
+  border-radius: 20px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(179, 147, 89, 0.3);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.85);
+  opacity: 0.6;
+}
+
+/* CENTER */
+.testimonial-card.center {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+}
+
+/* LEFT */
+.testimonial-card.left {
+  opacity: 0.6;
+  transform: translate(-150%, -50%) scale(0.85);
+  z-index: 2;
+}
+
+/* RIGHT */
+.testimonial-card.right {
+  opacity: 0.6;
+  transform: translate(50%, -50%) scale(0.85);
+  z-index: 2;
+}
+
+.testimonial-card.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Mobile */
+  @media (max-width: 767px) {
+  .carousel-arrow {
+    display: none;
+    left: auto;
+    right: auto;
+  }
+
+  .testimonial-container {
+    overflow: hidden;
+  }
+
+
+    .testimonial-viewport {
+      width: 100%;
+      touch-action: pan-y;
+    }
+
+    .testimonial-card {
+      flex: 0 0 90%;
+    }
+  }
+/* ========================================
+   ARROWS
+======================================== */
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(179,147,89,0.3);
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.carousel-arrow:hover {
+  background: #b39359;
+  color: white;
+}
+
+.carousel-arrow.left {
+  left: -60px;
+}
+
+.carousel-arrow.right {
+  right: -60px;
+}
+/* ========================================
+   FADE ANIMATION
+======================================== */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   NAV HOVER UNDERLINE
+======================================== */
+
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #b39359;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
